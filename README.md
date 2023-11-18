@@ -29,9 +29,10 @@ large and limited training data.
 
 ### **Citations**
 ```bibtex
-author = {Vaswani A., Shazeer N., Parmar N., Uszkoreit J., Jones L., Gomez A. N., Kaiser L., & Polosukhin I.},
-title = {Attention Is All You Need}, 
-year   = {2017},
-eprint = {arXiv:1706.03762},
+@misc{Vaswani2017,
+    author = {Vaswani A., Shazeer N., Parmar N., Uszkoreit J., Jones L., Gomez A. N., Kaiser L., & Polosukhin I.},
+    title = {Attention Is All You Need}, 
+    year   = {2017},
+    eprint = {arXiv:1706.03762},
 }
 ```
