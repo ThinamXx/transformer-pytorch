@@ -144,7 +144,7 @@ def get_ds(config):
     """
     Get the dataset.
     """
-    ds_raw = load_dataset("opus100", f'{config["src_lang"]}-{config["tgt_lang"]}', split="train")
+    ds_raw = load_dataset("opus_books", f'{config["src_lang"]}-{config["tgt_lang"]}', split="train")
     
     # Build tokenizers
     tokenizer_src = get_or_build_tokenizer(config, ds_raw, config["src_lang"])

@@ -6,8 +6,8 @@ def get_config():
     """
     config = {
         "src_lang": "en",
-        "tgt_lang": "ne",
-        "seq_len": 1024,
+        "tgt_lang": "it",
+        "seq_len": 250,
         "batch_size": 8,
         "num_epochs": 10,
         "learning_rate": 1e-4,
