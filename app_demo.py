@@ -36,7 +36,7 @@ def main():
 
     target_language = "German"
 
-    input_text = st.text_area("Enter text to translate", height=200)
+    input_text = st.text_area("Enter text to translate", height=200, key="input_text")
     output_text = st.empty()
 
     col1, col2 = st.columns(2)
@@ -44,11 +44,14 @@ def main():
     with col1:
         if st.button("Submit"):
             translated_text = translate(input_text, model, tokenizer, target_language)
-            output_text.text_area("Translated Text", translated_text, height=200)
+            output_text.text_area(
+                "Translated Text", translated_text, height=200, key="output_text"
+            )
 
     with col2:
         if st.button("Clear"):
-            output_text.empty()
+            input_text = ""
+            output_text.text_area("Translated Text", value="")
 
 
 if __name__ == "__main__":

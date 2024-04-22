@@ -1,5 +1,6 @@
 from pathlib import Path
 
+
 def get_config():
     """
     Get the configuration.
@@ -14,11 +15,12 @@ def get_config():
         "d_model": 512,
         "model_dir": "weights",
         "model_basename": "tmodel_",
-        "preload": None, 
+        "preload": None,
         "tokenizer_file": "tokenizers/tokenizer_{0}.json",
         "experiment_name": "runs/tmodel",
     }
     return config
+
 
 def get_weights_file_path(config, epoch):
     """
@@ -27,4 +29,4 @@ def get_weights_file_path(config, epoch):
     model_dir = config["model_dir"]
     model_basename = config["model_basename"]
     model_filename = f"{model_basename}{epoch}.pt"
-    return str(Path(".")/model_dir/model_filename)
+    return str(Path(".") / model_dir / model_filename)
